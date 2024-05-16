@@ -39,6 +39,7 @@ object DynamicColorPatch : ResourcePatch() {
                     it.write("<?xml version=\"1.0\" encoding=\"utf-8\"?><resources></resources>")
                 }
             }
+        }
 
             context.xmlEditor["res/values-v31/colors.xml"].use { editor ->
                 val document = editor.file
@@ -155,6 +156,5 @@ object DynamicColorPatch : ResourcePatch() {
 
                 document.getElementsByTagName("resources").item(0).appendChild(newStyle)
             }
-        }
     }
 }
